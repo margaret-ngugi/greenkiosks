@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>carts list</h3>
+    <table>
+        <th>
+            <td>Name</td>
+            <td>Quantity</td>
+            <td>Price</td>
+            <td>created_at</td>
+            <th>
+                {%for cart in carts%}
+                <tr>
+                    <td>{{cart.name}}</td>
+                   
+                    <td>{{cart.name}}<td>
+                        <td>{{cart.quantity}}</td>
+                        <td>{{cart.price}}</td>
+                        <td>{{cart.created_at}}</td>
+                        <tr>
+                            {%endfor%}
+                        </table>
+
+
+</body>
+</html>
+

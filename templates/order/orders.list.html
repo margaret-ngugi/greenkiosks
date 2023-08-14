@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>orders list</h3>
+    <table>
+        <th>
+            <td>Quantity</td>
+            <td>Customer_name</td>
+            <td>Customer_email</td>
+            <td>Order_date</td>
+            <th>
+                {%for order in orders%}
+                <tr>
+                    <td>{{order.quantity}}</td>
+                    <td>{{order.customer_name}}<td>
+                        <td>{{order.customer_email}}</td>
+                        <td>{{order.order_date}}</td>
+                        <tr>
+                            {%endfor%}
+                        </table>
+
+
+</body>
+</html>
+

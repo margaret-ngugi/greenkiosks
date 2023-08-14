@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>reviews list</h3>
+    <table>
+        <th>
+            <td>Author</td>
+            <td>Content</td>
+            <td>Rating</td>
+            <td>Date_posted</td>
+            <th>
+                {%for review in reviews%}
+                <tr>
+                    <td>{{review.author}}</td>
+                    <td>{{review.content}}<td>
+                        <td>{{review.rating}}</td>
+                        <td>{{review.date_posted}}</td>
+                        <tr>
+                            {%endfor%}
+                        </table>
+
+
+</body>
+</html>

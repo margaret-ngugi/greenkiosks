@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>vendors list</h3>
+    <table>
+        <th>
+            <td>firstName</td>
+            <td>LastName</td>
+            <td>Email</td>
+            <td>UserName</td>
+            <td>Password</td>
+            <td>Date_updated</td>
+            <th>
+                {%for vendor in vendors%}
+                <tr>
+                    <td>{{vendor.firstname}}</td>
+                    <td>{{vendor.lastname}}<td>
+                        <td>{{vendor.username}}</td>
+                        <td>{{vendor.password}}</td>
+                        <td>{{vendor.email}}</td>
+                        <td>{{vendor.date_updated}}</td>
+                        <tr>
+                            {%endfor%}
+                        </table>
+
+
+</body>
+</html>

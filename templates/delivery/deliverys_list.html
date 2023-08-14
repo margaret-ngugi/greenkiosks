@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>deliverys list</h3>
+    <table>
+        <th>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Time</td>
+            <td>Date</td>
+            <td>is_delivered</td>
+            
+            <th>
+                {%for delivery in deliverys%}
+                <tr>
+                    <td>{{delivery.name}}</td>
+                    <td>{{delivery.time}}<td>
+                        <td>{{delivery.is_delivered}}</td>
+                        <td>{{delivery.address}}</td>
+                        <td>{{delivery.date}}</td>
+                        <tr>
+                            {%endfor%}
+                        </table>
+
+
+</body>
+</html>
