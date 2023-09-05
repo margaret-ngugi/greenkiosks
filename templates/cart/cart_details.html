@@ -10,12 +10,14 @@
     <h4>{{cart.name}}</h4>  
     <p>{{cart.quantity}}   </p>
     <span>{{cart.price}}<span/>
-        <td> <a href="{url cart_details
-        id=cart.id%}">
+        <td> <a href="{%url 'cart_list'
+        %}">
         view cart </a></td>
+        <a href="#" class="pay-now-btn"><button>Pay Now</button></a>
         
         </div>
-
+      
+       
 </body>
 </html>
 

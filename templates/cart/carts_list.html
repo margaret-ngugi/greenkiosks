@@ -22,10 +22,14 @@
                         <td>{{cart.quantity}}</td>
                         <td>{{cart.price}}</td>
                         <td>{{cart.created_at}}</td>
+                        <td><a href="{% url 'cart_details' id=cart.id %}">View</a></td>
+                        <td><a href="{% url 'edit_details_view' id=cart.id %}">Edit</a></td>
                         <tr>
                             {%endfor%}
+                      
                         </table>
-
+                  
+                   
 
 </body>
 </html>

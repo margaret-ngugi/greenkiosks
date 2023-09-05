@@ -4,18 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F5F5F5
+;
+        }         .product-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 400px;
+        }        .images {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }        .product-title {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }        .product-description {
+            font-size: 1rem;
+            color:black;
+            margin: 0;
+        }        .product-price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color:black;
+        }        .add-to-cart-btn {
+            background-color:rgb(4, 146, 4);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }        .add-to-cart-btn:hover {
+            background-color:rgb(51, 236, 14);
+            text-decoration: solid;
+            color: black;
+        }
+    </style>
 </head>
 <body>
-    <div>
-    <img src="{{product.image.url}}"  alt = "product image" />
-    <h4>{{product.title}}</h4>  
-    <p>{{product.description}}   </p>
-    <span>{{product.price}}<span/>
-        <td> <a href="{url product_details
-        id=product.id%}">
-        view product </a></td>
-        <button>Add to cart</button>
-        </div>
-
-</body>
+        <div>
+        <img src="{{ product.image.url }}" alt="{{ product.title}}" class="images">
+        <h2 class="product-title"> {{ product.title}}</h2>
+        <p class="product-description"> {{ product.description}}</p>
+        <span class="product-price"> {{ product.price}}</span>
+        <a href="{% url 'carts_list'%}"><button class="add-to-cart-btn">Add to cart</button></a>
+        <button class="add-to-cart-btn">Delete from Cart</button>    
+    </div>
+    </body>
 </html>
